@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class App extends StatefulWidget {
-  const App({super.key});
+class ReorderableListViewBuilder extends StatefulWidget {
+  const ReorderableListViewBuilder({super.key});
 
   @override
-  State<StatefulWidget> createState() => _AppState();
+  State<StatefulWidget> createState() => _ReorderableListViewBuilderState();
 }
 
-class _AppState extends State<App> {
+class _ReorderableListViewBuilderState
+    extends State<ReorderableListViewBuilder> {
   final _listOfElements = List.generate(
     20,
     (index) => 'Element ${index.toString()}',
