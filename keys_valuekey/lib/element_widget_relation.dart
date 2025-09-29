@@ -2,36 +2,24 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class MainAppElementWidgetRelation extends StatelessWidget {
+class MainAppElementWidgetRelation extends StatefulWidget {
   const MainAppElementWidgetRelation({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepOrange,
-          brightness: Brightness.light,
-        ),
-      ),
-      home: MainPage(),
-    );
-  }
+  State<MainAppElementWidgetRelation> createState() =>
+      _MainAppElementWidgetRelationState();
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
-
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
+class _MainAppElementWidgetRelationState
+    extends State<MainAppElementWidgetRelation> {
   late List<Widget> randomColoredSquares;
 
   @override
   void initState() {
-    randomColoredSquares = [ColoredWidget(text: '1'), ColoredWidget(text: '2')];
+    randomColoredSquares = [
+      ColoredWidget(text: '1', key: UniqueKey()),
+      ColoredWidget(text: '2', key: UniqueKey()),
+    ];
     super.initState();
   }
 

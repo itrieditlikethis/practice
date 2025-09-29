@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'reorderable_list_view_builder.dart';
+import 'package:keys_valuekey/page_view_builder_global_key.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
       ),
-      home: const ReorderableListViewBuilder(),
+      home: MyAppGlobalKeyPageViewBuilder(),
     );
   }
 }
